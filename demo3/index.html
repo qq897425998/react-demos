@@ -1,0 +1,26 @@
+<!--ReactDOM.render函数-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+        var arr = [
+          <h1 key="1"> HelloWorld!</h1>,   //注意逗号 否则webstorme提示代码会出现错误
+          <h1 key="2"> React is awesome!</h1>
+        ];
+
+      ReactDOM.render(
+          <div>{arr}</div>,
+//arr变量是一个数组，JSX 会把它的所有成员，添加到模板，
+
+          document.getElementById('example')
+      )
+    </script>
+  </body>
+</html>

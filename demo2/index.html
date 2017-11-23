@@ -1,0 +1,30 @@
+<!--JSX语法规则-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var names = ['Alice', 'Emily', 'Kate'];
+
+
+//      JSX 遇到<>按HMTL解析   遇到{}按JS解析   所以默认在<></>HTML标签内部需要嵌入js时需要添加{}
+      ReactDOM.render(
+              <div>
+                  {
+                      names.map(function (name, index){
+                          return <div key={index}>Hello,{name}!</div>
+                      })
+                  }
+              </div>,
+      document.getElementById('example')
+      );
+
+    </script>
+  </body>
+</html>
